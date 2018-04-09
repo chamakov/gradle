@@ -195,7 +195,7 @@ class MavenPublishArtifactCustomizationIntegTest extends AbstractMavenPublishInt
                         classifier "regular"
                         extension "txt"
                     }
-                    artifact customJar {
+                    artifact(customJar) {
                         classifier null
                         extension "war"
                     }

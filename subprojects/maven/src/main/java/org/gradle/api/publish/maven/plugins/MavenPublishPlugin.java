@@ -104,7 +104,7 @@ public class MavenPublishPlugin implements Plugin<Project> {
         project.getExtensions().configure(PublishingExtension.class, new Action<PublishingExtension>() {
             public void execute(PublishingExtension extension) {
                 // Register factory for MavenPublication
-                extension.getPublications().registerFactory(MavenPublication.class, new MavenPublicationFactory(dependencyMetaDataProvider, instantiator, fileResolver));
+                extension.getPublications().registerFactory(MavenPublication.class, MavenPublicationInternal.class, new MavenPublicationFactory(dependencyMetaDataProvider, instantiator, fileResolver));
             }
         });
     }

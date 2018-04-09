@@ -275,6 +275,11 @@ public class DefaultMavenPublication implements MavenPublicationInternal {
         projectIdentity.setGroupId(groupId);
     }
 
+    @Override
+    public void groupId(String groupId) {
+        setGroupId(groupId);
+    }
+
     public String getArtifactId() {
         return projectIdentity.getArtifactId();
     }
@@ -283,12 +288,22 @@ public class DefaultMavenPublication implements MavenPublicationInternal {
         projectIdentity.setArtifactId(artifactId);
     }
 
+    @Override
+    public void artifactId(String artifactId) {
+        setArtifactId(artifactId);
+    }
+
     public String getVersion() {
         return projectIdentity.getVersion();
     }
 
     public void setVersion(String version) {
         projectIdentity.setVersion(version);
+    }
+
+    @Override
+    public void version(String version) {
+        setVersion(version);
     }
 
     public FileCollection getPublishableFiles() {

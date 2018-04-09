@@ -22,7 +22,7 @@ publishing {
         mavenJava(MavenPublication) {
             from components.java
 
-            artifact sourceJar {
+            artifact(sourceJar) {
                 classifier "sources"
             }
         }

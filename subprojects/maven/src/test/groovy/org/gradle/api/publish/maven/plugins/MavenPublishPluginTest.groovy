@@ -22,7 +22,7 @@ import org.gradle.api.file.FileCollection
 import org.gradle.api.internal.component.SoftwareComponentInternal
 import org.gradle.api.publish.PublishingExtension
 import org.gradle.api.publish.maven.MavenPublication
-import org.gradle.api.publish.maven.internal.publication.DefaultMavenPublication
+import org.gradle.api.publish.maven.internal.publication.MavenPublicationInternal
 import org.gradle.api.publish.maven.tasks.GenerateMavenPom
 import org.gradle.api.publish.maven.tasks.PublishToMavenLocal
 import org.gradle.api.publish.maven.tasks.PublishToMavenRepository
@@ -60,7 +60,7 @@ class MavenPublishPluginTest extends AbstractProjectBuilderSpec {
 
         then:
         publishing.publications.size() == 1
-        publishing.publications.test instanceof DefaultMavenPublication
+        publishing.publications.test instanceof MavenPublicationInternal
     }
 
     def "creates generation tasks for publication"() {

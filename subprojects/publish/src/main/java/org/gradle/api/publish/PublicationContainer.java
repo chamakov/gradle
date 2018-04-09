@@ -45,4 +45,6 @@ import org.gradle.api.*;
  */
 @Incubating
 public interface PublicationContainer extends ExtensiblePolymorphicDomainObjectContainer<Publication> {
+
+    <U extends Publication, V extends U> void registerFactory(Class<U> type, Class<V> internalType, NamedDomainObjectFactory<? extends U> factory);
 }

@@ -59,5 +59,11 @@ public interface MavenPublicationInternal extends MavenPublication, PublicationI
     void publishWithOriginalFileName();
 
     boolean canPublishModuleMetadata();
+
+    void groupId(String groupId);
+
+    void artifactId(String artifactId);
+
+    void version(String version);
 }
 
